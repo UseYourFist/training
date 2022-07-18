@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="@dimen/common_spacing">
 
     <ImageView
         android:id="@+id/avatar"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:layout_width="@dimen/post_avatar_size"
+        android:layout_height="@dimen/post_avatar_size"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:srcCompat="@drawable/ic_netology"
@@ -18,8 +18,8 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="@dimen/common_spacing"
+        android:layout_marginEnd="@dimen/common_spacing"
         android:id="@+id/authorName"
         android:singleLine="true"
         android:ellipsize="end"
@@ -49,5 +49,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:src="@drawable/ic_menu_24dp"
         android:background="@android:color/transparent"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/headerBarrier"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="avatar, date, menu" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        tools:text="@tools:sample/lorem/random"
+        app:layout_constraintTop_toBottomOf="@+id/headerBarrier" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
