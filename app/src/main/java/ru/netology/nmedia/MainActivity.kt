@@ -69,10 +69,6 @@ class MainActivity : AppCompatActivity() {
                 post.viewsNumber = result[0] + "." + result[1] + "M"
             }
             viewsNumber.setText(post.viewsNumber)
-
-            binding.root.setOnClickListener {}
-
-            binding.likes.setOnClickListener{}
         }
     }
 }
