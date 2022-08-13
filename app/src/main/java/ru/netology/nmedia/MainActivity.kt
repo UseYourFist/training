@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
                     if (post.likedByMe) numberLikes++ else numberLikes--
                 post.likesNumber = numberLikes.toString()
                 likesNumber.setText(
-                    post.likesNumber
+                    numFormat(post.likesNumber)
                 )
             }
 
@@ -50,25 +50,10 @@ class MainActivity : AppCompatActivity() {
                 numberShares++
                 post.sharesNumber = numberShares.toString()
                 sharesNumber.setText(
-                    post.sharesNumber
+                    numFormat(post.sharesNumber)
                 )
             }
-
-            var numberViews = post.viewsNumber.toLong()
-            val result = numberViews.toString()
-            if (numberViews in 1000..1_099) {
-                post.viewsNumber = "1K"
-            }
-            if (numberViews in 1_000..9_999) {
-                post.viewsNumber = result[0] + "." + result[1] + "K"
-            }
-            if (numberViews in 10_000..999_999) {
-                post.viewsNumber = result[0] + "" + result[1] + "K"
-            }
-            if (numberViews > 1_000_000) {
-                post.viewsNumber = result[0] + "." + result[1] + "M"
-            }
-            viewsNumber.setText(post.viewsNumber)
+            viewsNumber.setText(numFormat(post.viewsNumber))
         }
     }
 }
