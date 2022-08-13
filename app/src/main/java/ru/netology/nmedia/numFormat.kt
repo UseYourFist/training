@@ -18,5 +18,5 @@ if (number in 10_000..999_999) {
 if (number > 1_000_000) {
     return result[0] + "." + result[1] + "M"
 }
-else return "0"
+else return numberOrig
 }

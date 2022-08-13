@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
             author = "Kostantin",
             content = "Home Work",
             published = "09.08.22",
-            likesNumber = "9",
+            likesNumber = "999",
             sharesNumber = "0",
             viewsNumber = "1120000",
             likedByMe = false
