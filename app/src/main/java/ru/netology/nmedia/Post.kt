@@ -8,5 +8,5 @@ data class Post(
     var likesNumber: String,
     var sharesNumber: String,
     var viewsNumber: String,
-    var likedByMe: Boolean = false
+    val likedByMe: Boolean
 )
